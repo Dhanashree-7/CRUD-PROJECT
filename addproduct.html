@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetic product</title>
+</head>
+<body>
+    <H1>CRUD PROJECT</H1>
+    <a href="/">Home</a><br>
+    <a href="/add">Add product</a><br>
+    <a href="/all">products</a><br>
+
+    <h1>Add Product</h1>
+    <form action="/saveproduct" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name</td>
+                 <td><input type="text", name="Name"></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><input type="text", name="Company"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+               <td><input type="number", name="Price"></td>
+            </tr>
+        </table><br>
+        <tr>
+            <button id="">Add Product</button>
+        </tr>
+    </form>
+</body>
+</html>
